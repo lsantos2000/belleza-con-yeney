@@ -34,5 +34,8 @@ yarn-error.log*
 next-env.d.ts
 /dist/
 /.wrangler/
+/.wrangler-config/
 /outputs/
 /work/
+/tmp/
+/public/libro-transparente.png
