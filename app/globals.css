@@ -65,3 +65,7 @@
 
 @media(max-width:480px){.heroVisual{min-height:350px}.authorPhoto img{height:420px}.quoteGrid>img{height:340px}.gallerySection,.photoStory{padding:52px 0}}
 .carouselTop{justify-content:flex-end}
+
+/* Keep purchase choices visually separated from the copy that introduces them. */
+p + .purchaseActions,
+h2 + .purchaseActions{margin-top:28px}
