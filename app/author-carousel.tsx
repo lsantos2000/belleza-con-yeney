@@ -1,7 +1,7 @@
 'use client';
 import { useRef } from 'react';
 
-const order=[38,39,40,41,44,22,23,25,19,20,21,11,12,13,14,15,16,17,31,32,33,26,28,29,30,1,2,3,4,5,6,7,10,18,34,36,48,50,51];
+const order=[38,39,40,41,44,22,23,25,19,20,21,11,12,13,14,15,16,17,31,32,33,26,28,29,30,1,2,3,4,5,6,7,10,34,36,50,51,18,48];
 const photos=order.map(i=>`/yeney-gallery/yeney-${String(i).padStart(2,'0')}.jpg`);
 
 export default function AuthorCarousel({lang='es'}:{lang?:'es'|'en'}){
