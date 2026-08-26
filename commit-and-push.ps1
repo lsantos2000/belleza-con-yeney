@@ -40,7 +40,23 @@ try {
         throw "Unable to create the commit."
     }
 
-    git push $Remote $branch
+    $gitHubToken = $null
+    if (Get-Command gh -ErrorAction SilentlyContinue) {
+        $gitHubToken = (& gh auth token 2>$null)
+        if ($gitHubToken) {
+            $gitHubToken = $gitHubToken.Trim()
+        }
+    }
+
+    if ($gitHubToken) {
+        $credential = [Convert]::ToBase64String(
+            [Text.Encoding]::ASCII.GetBytes("x-access-token:$gitHubToken")
+        )
+        git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $credential" push $Remote $branch
+    }
+    else {
+        git push $Remote $branch
+    }
     if ($LASTEXITCODE -ne 0) {
         throw "The commit was created, but the push to '$Remote/$branch' failed."
     }
