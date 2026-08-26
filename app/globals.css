@@ -25,3 +25,26 @@
 @media(max-width:800px){.navlinks>a{display:none!important}.navlinks{gap:0}.languageSwitcher{font-size:10px;padding:7px 8px}}
 @media(min-width:801px){.photoStory>.sectionTitle{max-width:none;display:grid;grid-template-columns:1fr 1fr;column-gap:100px}.photoStory>.sectionTitle>*{grid-column:2}}
 .book,.bookCutout{clip-path:polygon(4% 4%,85% 0,96% 2%,100% 5%,100% 95%,96% 97%,5% 100%,2% 97%,2% 7%)}
+
+/* Stable, unclipped navigation for iOS Safari and tablet widths. */
+.nav{box-shadow:none;clip-path:none;isolation:isolate}
+.nav::before{content:'';position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:#fffdf9;border-bottom:1px solid #e7d9d1}
+
+@media(max-width:1024px){
+  .nav{display:grid;grid-template-columns:48px 1fr auto;height:72px;gap:12px}
+  .mobileMenu{display:block;position:relative;z-index:2}
+  .mobileMenu summary{width:44px;height:44px;border:1px solid #d5c3ba;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .mobileMenu summary span{display:block;width:18px;height:1.5px;background:var(--wine);transition:transform .2s,opacity .2s}
+  .mobileMenu[open] summary span:first-child{transform:translateY(6.5px) rotate(45deg)}
+  .mobileMenu[open] summary span:nth-child(2){opacity:0}
+  .mobileMenu[open] summary span:last-child{transform:translateY(-6.5px) rotate(-45deg)}
+  .mobileMenu>div{position:fixed;z-index:1000;top:72px;left:max(16px,env(safe-area-inset-left));width:min(82vw,310px);max-height:calc(100dvh - 88px);overflow-y:auto;overscroll-behavior:contain;padding:12px;background:#fffdf9;border:1px solid #dfcfc7;border-radius:0 0 14px 14px;box-shadow:0 18px 45px rgba(60,35,29,.18)}
+  .mobileMenu>div a{display:block;padding:14px 15px;border-bottom:1px solid #eaded7;font:500 18px 'Playfair Display'}
+  .mobileMenu>div a:last-child{border:0}
+  .nav>.brand{justify-self:center}
+  .navlinks{justify-self:end;gap:0}
+  .navlinks>a{display:none!important}
+  .languageSwitcher{font-size:10px;padding:7px 8px}
+}
+
+@media(max-width:480px){.nav{grid-template-columns:44px 1fr auto;gap:8px}.languageSwitcher{gap:4px;padding:6px 7px}}
