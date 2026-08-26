@@ -2,8 +2,10 @@ const kindle = 'https://www.amazon.com/dp/B0HDKQTKZ9';
 const paperback = 'https://www.amazon.com/dp/B0HFHC2QL7';
 const googlePlay = 'https://play.google.com/store/books/details?id=8VgDEgAAQBAJ';
 
+export function MobileMenu(){return <details className="mobileMenu"><summary aria-label="Abrir menú"><span></span><span></span><span></span></summary><div><a href="/">Inicio</a><a href="/el-metodo">El método</a><a href="/el-libro">El libro</a><a href="/demo-libro">Demo PDF</a><a href="/la-autora">La autora</a><a href="/preguntas">Preguntas</a></div></details>}
+
 export function Header() {
-  return <nav className="nav wrap"><a className="brand" href="/"><span>YL</span> Yeney López-Pérez</a><div className="navlinks"><a href="/el-metodo">El método</a><a href="/el-libro">El libro</a><a href="/demo-libro">Demo</a><a href="/la-autora">La autora</a><a href="/preguntas">Preguntas</a><a className="navcta" href={paperback} target="_blank" rel="noreferrer">Comprar</a></div></nav>;
+  return <nav className="nav wrap"><MobileMenu/><a className="brand" href="/"><span>YL</span> Yeney López-Pérez</a><div className="navlinks"><a href="/el-metodo">El método</a><a href="/el-libro">El libro</a><a href="/demo-libro">Demo</a><a href="/la-autora">La autora</a><a href="/preguntas">Preguntas</a><a className="navcta" href={paperback} target="_blank" rel="noreferrer">Comprar</a></div></nav>;
 }
 
 export function PurchaseButtons() {
