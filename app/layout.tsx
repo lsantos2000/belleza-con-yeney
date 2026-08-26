@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './purchase-menu.css';
 
 export const metadata: Metadata = {
   title: 'El Método Cabello Saludable | Yeney López-Pérez',
@@ -11,3 +12,4 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="es"><body>{children}</body></html>;
 }
+
