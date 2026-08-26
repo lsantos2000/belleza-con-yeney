@@ -48,3 +48,20 @@
 }
 
 @media(max-width:480px){.nav{grid-template-columns:44px 1fr auto;gap:8px}.languageSwitcher{gap:4px;padding:6px 7px}}
+
+/* Compact vertical rhythm across every page. */
+.hero{min-height:620px}.heroGrid{min-height:532px}.heroCopy{padding:36px 0 50px}.intro{padding:88px 0 58px}.pillars{margin-bottom:85px}.pillars article{padding:34px 38px 38px}.inside{padding-bottom:88px}.forYou{padding:78px 0}.quoteGrid{min-height:500px}.quoteGrid>img{height:500px}.quoteGrid blockquote{padding:55px}.author{padding:92px 0}.authorPhoto img{height:570px}.ctaGrid{min-height:440px}.bookCta img{height:400px}footer{min-height:105px}.faq{padding:88px 0}
+.detailHeroGrid{min-height:560px}.detailIntro{padding:82px 0}.steps{margin-bottom:80px}.steps article{padding:32px 24px}.splitFeature>div,.authorStory>div{min-height:520px}.splitFeature img,.authorStory img,.authorStory .fullHair{height:520px}.bookStats{padding:44px 0}.gallerySection,.photoStory{padding:82px 0}.buyStrip{padding:60px 0}.authorPageHero{padding:60px 0 85px}.faqPageHero{padding:82px 0}.faqFull{padding:82px 0}.faqCta>div{min-height:420px}.faqCta img{height:380px}.demoHero{padding:72px 0}.pdfSection{padding:55px 0 75px}.demoBuy{padding:62px 0}
+
+@media(max-width:800px){
+  .hero{min-height:auto}.heroGrid{min-height:auto;padding-top:20px}.heroCopy{padding:32px 0 38px}.heroVisual{min-height:390px}
+  .intro{padding:62px 0 48px}.pillars{margin-bottom:62px}.pillars article{padding:28px 30px 32px}.inside{padding-bottom:62px}.forYou{padding:58px 0}
+  .quoteGrid{min-height:auto}.quoteGrid>img{height:380px}.quoteGrid blockquote{padding:42px 20px}.author{gap:45px;padding:62px 0}.authorPhoto img{height:460px}
+  .ctaGrid{min-height:auto;padding-top:52px}.bookCta img{height:330px}.faq{padding:62px 0}
+  .detailHeroGrid{min-height:auto;padding:48px 0}.detailIntro{padding:62px 0}.steps{margin-bottom:62px}.splitFeature>div,.authorStory>div{min-height:auto}.splitFeature img,.authorStory img,.authorStory .fullHair{height:430px}
+  .bookStats{padding:36px 0}.gallerySection,.photoStory{padding:62px 0}.buyStrip{padding:52px 0}.authorPageHero{padding:50px 0 68px}.faqPageHero{padding:62px 0}.faqFull{padding:62px 0}.faqCta>div{min-height:auto;padding-top:48px}
+  .demoHero{padding:58px 0}.pdfSection{padding:34px 0 52px}.demoBuy{padding:52px 0}
+}
+
+@media(max-width:480px){.heroVisual{min-height:350px}.authorPhoto img{height:420px}.quoteGrid>img{height:340px}.gallerySection,.photoStory{padding:52px 0}}
+.carouselTop{justify-content:flex-end}
