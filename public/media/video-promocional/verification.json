@@ -1,0 +1,14 @@
+{
+  "photos": 23,
+  "pages": 41,
+  "exact_duplicates": 0,
+  "perceptual_candidates": [],
+  "collages": 3,
+  "duration_seconds": 180,
+  "all_scenes_include_book": true,
+  "author_sides_alternate": true,
+  "mirror_photo_excluded": true,
+  "kitchen_photo_excluded": true,
+  "text_panels": 0,
+  "multi_page_scenes": 6
+}
