@@ -25,7 +25,7 @@ def frame(sec,s,n):
     if s['kind']=='cta':
         p=ImageOps.fit(Image.open(MEDIA/s['photo']).convert('RGB'),(468,565),Image.Resampling.LANCZOS,centering=(.5,.38));im.paste(p,(16,88))
         d.rounded_rectangle((510,118,1240,615),radius=34,fill=CREAM,outline=GOLD,width=3)
-        for xy,text,size,bold,color in [((545,143),'Información de compra',36,True,COLOR),((545,192),'El Método Cabello Saludable',30,True,'#111111'),((545,264),'Amazon Books · Libro impreso',28,True,COLOR),((545,305),'https://www.amazon.com/dp/B0HFHC2QL7',23,False,'#333333'),((545,369),'Google Play Books · Edición digital',27,True,COLOR),((545,411),'https://play.google.com/store/books/',22,False,'#333333'),((545,441),'details?id=8VgDEgAAQBAJ',22,False,'#333333'),((545,518),'Reserva tu copia HOY MISMO.',32,True,COLOR),((545,571),'belleza-con-yeney.pages.dev',23,True,COLOR)]:d.text(xy,text,font=font(size,bold),fill=color)
+        for xy,text,size,bold,color in [((545,143),'Información de compra',36,True,COLOR),((545,193),'El Método Cabello Saludable',30,True,'#111111'),((545,258),'Amazon Books · Libro impreso y digital',26,True,COLOR),((545,295),'https://www.amazon.com/dp/B0HFHC2QL7',23,False,'#333333'),((545,348),'Google Play Books · Edición digital',27,True,COLOR),((545,385),'https://play.google.com/store/books/',22,False,'#333333'),((545,412),'details?id=8VgDEgAAQBAJ',22,False,'#333333'),((545,461),'YouTube Demo',27,True,COLOR),((545,499),'https://www.youtube.com/watch?v=xUI1K6fISGw',22,False,'#333333'),((545,560),'Reserva tu copia HOY MISMO.',32,True,COLOR)]:d.text(xy,text,font=font(size,bold),fill=color)
         d.line((545,240,1200,240),fill='#C98278',width=3)
     elif s['kind']=='collage':
         count=len(s['pages']); width=1208//count
