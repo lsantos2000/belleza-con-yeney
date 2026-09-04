@@ -1,8 +1,15 @@
 'use client';
 import { useRef } from 'react';
 
-const order=[22,19,17,39,23,20,16,40,25,21,36,41,29,15,28,44,30,31,12,38,1,32,13,10,3,33,11,50,34,14,2,51,6,5,4,7,26,18,48];
-const photos=order.map(i=>`/yeney-gallery/yeney-${String(i).padStart(2,'0')}.jpg`);
+// Existing unique portraits; kitchen/corset photos remain excluded.
+const order=[22,19,17,39,23,20,16,40,25,21,36,41,29,15,28,44,30,31,12,38,32,13,10,3,33,11,50,34,14,2,51,6,5,7,26];
+// Reuse the new originals already stored in the repo, without duplicate copies.
+const newOrder=[13,1,6,10,4,17,19,42];
+const photos=[
+  ...newOrder.map(i=>`/media/video-promocional/fotos-unicas/yeney-${String(i).padStart(2,'0')}.jpeg`),
+  ...order.map(i=>`/yeney-gallery/yeney-${String(i).padStart(2,'0')}.jpg`),
+  ...[18,48].map(i=>`/yeney-gallery/yeney-${i}.jpg`),
+];
 
 export default function AuthorCarousel({lang='es'}:{lang?:'es'|'en'}){
   const track=useRef<HTMLDivElement>(null);
