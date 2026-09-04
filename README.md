@@ -88,7 +88,16 @@ public/El-metodo-cabello-saludable-de-yeny-demo.pdf
 
 La versión pública se aloja en el proyecto de Cloudflare Pages `belleza-con-yeney`. Antes de publicar, ejecuta `pnpm build` y confirma que las doce rutas en español e inglés se generen correctamente.
 
+Para exportar las doce rutas como archivos estáticos y publicar en Pages desde PowerShell:
+
+```powershell
+$env:CLOUDFLARE_PAGES_EXPORT = '1'
+node node_modules/vinext/dist/cli.js build
+node node_modules/wrangler/bin/wrangler.js pages deploy dist/client --project-name belleza-con-yeney --branch main
+```
+
+Se requiere una sesión válida de Wrangler. Sin esa variable, la compilación conserva el comportamiento habitual del proyecto.
+
 ## Derechos
 
 El contenido editorial, el libro y las fotografías pertenecen a sus respectivos titulares. Este repositorio no incluye una licencia de reutilización; su publicación pública no concede derechos sobre esos materiales.
-

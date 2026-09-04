@@ -1,6 +1,17 @@
 # Handoff to Claude — latest work
 
-Updated: 2026-09-04. This is a factual handoff, not evidence that pending changes have been published. Read `CLAUDE.md` too. Preserve the existing worktree.
+Updated: 2026-09-04. Read `CLAUDE.md` too. Preserve the existing worktree.
+
+## Latest deployment update (supersedes older blockers below)
+
+- User completed Wrangler login; OAuth authentication verified successfully.
+- Published the latest site and public media to Cloudflare Pages production: https://belleza-con-yeney.pages.dev/
+- Successful deployment URL: https://8f7c1b47.belleza-con-yeney.pages.dev
+- Verified all twelve production routes returned HTTP 200 with Amazon and YouTube Demo links.
+- Added conditional static export in `next.config.ts`: set `CLOUDFLARE_PAGES_EXPORT=1`, then run `node node_modules/vinext/dist/cli.js build`. Deploy `dist/client` with Wrangler Pages, project `belleza-con-yeney`, branch `main`. README documents the PowerShell commands.
+- Commit `22b88d8` saved the final purchase copy, video, and original handoff. GitHub push failed due to separate GitHub authentication; Wrangler login does not resolve that. No GitHub push was attempted during this deployment.
+- Deployment-related config, README and this handoff update remain uncommitted.
+- Older Cloudflare authentication/export blockers below are historical and resolved by this update.
 
 ## Location and project
 
