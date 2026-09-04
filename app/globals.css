@@ -69,3 +69,6 @@
 /* Keep purchase choices visually separated from the copy that introduces them. */
 p + .purchaseActions,
 h2 + .purchaseActions{margin-top:28px}
+
+/* Separate the YouTube demo link from the purchase buttons in both languages. */
+.purchaseInfo > .purchaseActions + p{margin-top:24px}
