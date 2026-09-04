@@ -19,7 +19,7 @@ export function Header({ lang = 'es', path = '/' }: { lang?: SiteLanguage; path?
 }
 
 export function PurchaseButtons({ lang = 'es' }: { lang?: SiteLanguage }) {
-  return <div className="actions purchaseActions"><a className="button amazonButton" href={paperback} target="_blank" rel="noreferrer">{lang === 'es' ? 'Amazon (Kindle/Libro impreso)' : 'Amazon (Kindle/Printed book)'} <span>↗</span></a><a className="button googlePlay" href={googlePlay} target="_blank" rel="noreferrer">Google Play Books (Ebook) <span>↗</span></a></div>;
+  return <div className="purchaseInfo"><h3>{lang === 'es' ? 'Información de compra' : 'Purchase info'}</h3><p>{lang === 'es' ? 'Disponible como libro impreso en Amazon Books y en edición digital en Google Play Books.' : 'Available as a printed book on Amazon Books and a digital edition on Google Play Books.'}</p><div className="actions purchaseActions"><a className="button amazonButton" href={paperback} target="_blank" rel="noreferrer">{lang === 'es' ? 'Amazon Books · Libro impreso' : 'Amazon Books · Printed book'} <span>↗</span></a><a className="button googlePlay" href={googlePlay} target="_blank" rel="noreferrer">{lang === 'es' ? 'Google Play Books · Edición digital' : 'Google Play Books · Digital edition'} <span>↗</span></a></div><p><strong>{lang === 'es' ? 'Reserva tu copia HOY MISMO.' : 'Reserve your copy TODAY.'}</strong></p></div>;
 }
 
 export function Footer({ lang = 'es' }: { lang?: SiteLanguage }) {
