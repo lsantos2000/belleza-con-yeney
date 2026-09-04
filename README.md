@@ -1,4 +1,4 @@
-# Belleza con Yeney
+# YeneyWellness
 
 Sitio web oficial bilingüe de **Yeney López-Pérez**, autora de *El Método Cabello Saludable*. Presenta el libro, su método, una galería de la autora, preguntas frecuentes y una demostración descargable en PDF.
 
@@ -73,9 +73,18 @@ app/
   author-carousel.tsx    # orden y comportamiento del carrusel
   language-switcher.tsx  # cookie y cambio de idioma
   site-chrome.tsx        # navegación, compras y pie de página
-public/
-  book-pages/            # páginas de muestra
-  yeney-gallery/         # fotografías de la autora
+books/
+  ElMetodoCabelloSaludable/
+    es/content/           # contenido editorial en español
+    en/content/           # contenido editorial en inglés
+    video-generator/      # generador promocional
+resources/
+  images/author/          # fotografías compartidas de Yeney
+  images/books/           # páginas e imágenes de libros
+  docs/                   # documentos y auditorías
+  videos/                 # videos finales
+  audio/                  # narraciones
+public/                   # recursos web sincronizados
 ```
 
 El PDF público mantiene un nombre estable para permitir futuras sustituciones sin cambiar los enlaces:

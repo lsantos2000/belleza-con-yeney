@@ -6,6 +6,8 @@ Guidance for AI coding agents working in this repository.
 
 This is the official bilingual marketing site for Yeney López-Pérez and her Spanish-language book, *El Método Cabello Saludable*. Preserve its warm hair-health and self-care identity. The site is informational and intentionally has no authentication or authorization layer.
 
+The repository is named **YeneyWellness**. Shared canonical assets belong in `resources/`; book-specific content and generators belong in `books/ElMetodoCabelloSaludable/`. Run `pnpm sync-assets` after resource changes. Do not treat generated public copies as canonical sources.
+
 Production URL: `https://belleza-con-yeney.pages.dev/`
 
 ## Required workflow
@@ -104,4 +106,3 @@ Do not commit build output, deployment staging directories, temporary renders, W
 - `tmp/`
 - `.wrangler/`
 - `.wrangler-config/`
-

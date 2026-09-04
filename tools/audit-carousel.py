@@ -9,8 +9,8 @@ root = Path(__file__).resolve().parents[1]
 source = (root / 'app/author-carousel.tsx').read_text(encoding='utf-8')
 order = [int(x) for x in re.search(r'const order=\[([^]]+)\]', source)[1].split(',')]
 new_order = [int(x) for x in re.search(r'const newOrder=\[([^]]+)\]', source)[1].split(',')]
-gallery = [root / f'public/yeney-gallery/yeney-{n:02}.jpg' for n in order + [18,48]]
-gallery += [root / f'public/media/video-promocional/fotos-unicas/yeney-{n:02}.jpeg' for n in new_order]
+gallery = [root / f'resources/images/author/gallery/yeney-{n:02}.jpg' for n in order + [18,48]]
+gallery += [root / f'resources/images/author/video-source/yeney-{n:02}.jpeg' for n in new_order]
 def dhash(p):
     with Image.open(p) as im:
         pixels = list(ImageOps.exif_transpose(im).convert('L').resize((17,16)).get_flattened_data())

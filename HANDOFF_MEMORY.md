@@ -1,5 +1,9 @@
 # Handoff to Claude — latest work
 
+## YeneyWellness repository structure
+
+The repository is now organized as YeneyWellness. Book content and its generator live under `books/ElMetodoCabelloSaludable/`; shared canonical images, documents, videos, and audio live under root-level `resources/`. Web-ready copies are generated into ignored legacy paths under `public/` by `node tools/sync-public-assets.mjs`, preserving all published URLs. Run `pnpm sync-assets` after changing resources. The old duplicate video photo folders were removed from version control.
+
 Updated: 2026-09-04. Read `CLAUDE.md` too. Preserve the existing worktree.
 
 ## Latest deployment update (supersedes older blockers below)

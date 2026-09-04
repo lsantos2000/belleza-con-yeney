@@ -1,12 +1,15 @@
 {
-  "name": "sites-project",
+  "name": "yeneywellness",
   "version": "0.1.0",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
   },
   "scripts": {
+    "sync-assets": "node tools/sync-public-assets.mjs",
+    "predev": "node tools/sync-public-assets.mjs",
     "dev": "vinext dev",
+    "prebuild": "node tools/sync-public-assets.mjs",
     "build": "vinext build",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
