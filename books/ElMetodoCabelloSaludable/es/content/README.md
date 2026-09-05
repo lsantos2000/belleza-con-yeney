@@ -1,3 +1,3 @@
-# Contenido en español
+# Spanish editorial content
 
-Espacio para contenido editorial estructurado de *El Método Cabello Saludable*.
+Structured Spanish-language editorial content for *El Método Cabello Saludable* belongs here.

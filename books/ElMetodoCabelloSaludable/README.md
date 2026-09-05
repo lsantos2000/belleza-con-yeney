@@ -1,7 +1,7 @@
 # El Método Cabello Saludable
 
-- `es/content/`: contenido editorial en español.
-- `en/content/`: contenido editorial en inglés.
-- `video-generator/`: generador reproducible del video promocional.
+- `es/content/`: Spanish editorial content.
+- `en/content/`: English editorial content.
+- `video-generator/`: reproducible promotional-video generator.
 
-Los recursos compartidos se conservan una sola vez en `resources/`.
+Shared resources are stored once in the root-level `resources/` directory.

@@ -2,6 +2,14 @@
 
 Guidance for AI coding agents working in this repository.
 
+## Development language
+
+Use English for repository documentation, source-code comments, script messages, commit messages, and technical handoffs. Spanish is allowed only for the Spanish public routes, the Spanish-language book, its narration, and intentional on-screen promotional copy. Preserve established Spanish route names and stable asset filenames because they are public interfaces.
+
+## Project skill
+
+Claude Code automatically discovers `.claude/skills/yeneywellness-project/SKILL.md`. Load that skill for detailed architecture, media constraints, purchase data, deployment instructions, and the latest handoff state. Keep durable rules in this file and task-specific operational context in the skill.
+
 ## Project intent
 
 This is the official bilingual marketing site for Yeney López-Pérez and her Spanish-language book, *El Método Cabello Saludable*. Preserve its warm hair-health and self-care identity. The site is informational and intentionally has no authentication or authorization layer.

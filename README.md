@@ -1,103 +1,105 @@
 # YeneyWellness
 
-Sitio web oficial bilingüe de **Yeney López-Pérez**, autora de *El Método Cabello Saludable*. Presenta el libro, su método, una galería de la autora, preguntas frecuentes y una demostración descargable en PDF.
+Official bilingual website for **Yeney López-Pérez**, author of the Spanish-language book *El Método Cabello Saludable*. The site presents the book, its method, the author gallery, frequently asked questions, and a downloadable PDF preview.
 
-**Producción:** [belleza-con-yeney.pages.dev](https://belleza-con-yeney.pages.dev/)
+**Production:** [belleza-con-yeney.pages.dev](https://belleza-con-yeney.pages.dev/)
 
-## Características
+## Features
 
-- Español como idioma inicial y versión inglesa completa bajo `/en`.
-- Selector `Español / English` que conserva la página actual y guarda la preferencia en una cookie.
-- Diseño adaptable para escritorio y dispositivos móviles.
-- Menú móvil accesible.
-- Carrusel de fotografías que respeta el encuadre original de las imágenes.
-- Demo del libro integrada en el navegador y disponible para descargar.
-- Enlaces de compra oficiales para Amazon y Google Play Books.
-- Sitio informativo sin autenticación ni recopilación de cuentas de usuario.
+- Spanish is the default public language; the complete English version lives under `/en`.
+- The `Español / English` selector preserves the current page and stores the preference in a cookie.
+- Responsive desktop and mobile layouts with an accessible mobile menu.
+- An author carousel that preserves the original framing of each photograph.
+- An embedded book preview with a PDF download option.
+- Official purchase links for Amazon and Google Play Books.
+- Informational site with no authentication or user-account collection.
 
-## Páginas
+## Routes
 
-| Español | English | Contenido |
+| Spanish | English | Purpose |
 | --- | --- | --- |
-| `/` | `/en/` | Página principal |
-| `/el-metodo/` | `/en/el-metodo/` | Explicación del método |
-| `/el-libro/` | `/en/el-libro/` | Interior y contenido del libro |
-| `/demo-libro/` | `/en/demo-libro/` | Lector y descarga del PDF demo |
-| `/la-autora/` | `/en/la-autora/` | Biografía y galería de Yeney |
-| `/preguntas/` | `/en/preguntas/` | Preguntas frecuentes |
+| `/` | `/en/` | Home page |
+| `/el-metodo/` | `/en/el-metodo/` | Method overview |
+| `/el-libro/` | `/en/el-libro/` | Book contents and interior |
+| `/demo-libro/` | `/en/demo-libro/` | PDF preview and download |
+| `/la-autora/` | `/en/la-autora/` | Author biography and gallery |
+| `/preguntas/` | `/en/preguntas/` | Frequently asked questions |
 
-## Enlaces del libro
+## Official book links
 
-- [Amazon — Kindle y libro impreso](https://www.amazon.com/dp/B0HFHC2QL7)
+- [Amazon — Kindle and printed book](https://www.amazon.com/dp/B0HFHC2QL7)
 - [Google Play Books — Ebook](https://play.google.com/store/books/details?id=8VgDEgAAQBAJ)
+- [YouTube demo](https://www.youtube.com/watch?v=xUI1K6fISGw)
 
-## Tecnología
+## Technology
 
-- Next.js 16 y React 19
-- Vinext y Vite
+- Next.js 16 and React 19
+- Vinext and Vite
 - TypeScript
 - Tailwind CSS 4
 - Cloudflare Pages
 - pnpm
 
-Se requiere Node.js `22.13.0` o posterior.
+Node.js `22.13.0` or newer is required.
 
-## Desarrollo local
+## Local development
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-El servidor de desarrollo indicará la URL local disponible.
+The development server prints the available local URL.
 
-## Comandos
+## Commands
 
 ```bash
-pnpm dev      # desarrollo local
-pnpm build    # compilación de producción
-pnpm start    # ejecutar la compilación localmente
-pnpm lint     # revisar el código
+pnpm dev          # Start local development
+pnpm build        # Create a production build
+pnpm start        # Run the production build locally
+pnpm lint         # Check the source code
+pnpm sync-assets  # Refresh generated public copies from canonical resources
 ```
 
-## Estructura principal
+## Repository structure
 
 ```text
 app/
-  en/                    # rutas traducidas al inglés
-  demo-libro/            # lector del PDF
-  el-libro/              # muestras del interior
-  el-metodo/             # explicación del método
-  la-autora/             # biografía y carrusel
-  preguntas/             # preguntas frecuentes
-  author-carousel.tsx    # orden y comportamiento del carrusel
-  language-switcher.tsx  # cookie y cambio de idioma
-  site-chrome.tsx        # navegación, compras y pie de página
+  en/                    # English public routes
+  demo-libro/            # Spanish PDF preview route
+  el-libro/              # Spanish book route
+  el-metodo/             # Spanish method route
+  la-autora/             # Spanish biography and carousel route
+  preguntas/             # Spanish FAQ route
+  author-carousel.tsx    # Carousel order and behavior
+  language-switcher.tsx  # Language cookie and route switching
+  site-chrome.tsx        # Navigation, purchase UI, and footer
 books/
   ElMetodoCabelloSaludable/
-    es/content/           # contenido editorial en español
-    en/content/           # contenido editorial en inglés
-    video-generator/      # generador promocional
+    es/content/           # Spanish editorial content
+    en/content/           # English editorial content
+    video-generator/      # Reproducible promotional-video generator
 resources/
-  images/author/          # fotografías compartidas de Yeney
-  images/books/           # páginas e imágenes de libros
-  docs/                   # documentos y auditorías
-  videos/                 # videos finales
-  audio/                  # narraciones
-public/                   # recursos web sincronizados
+  images/author/          # Shared canonical author photographs
+  images/books/           # Canonical book pages and artwork
+  docs/                   # Audits and production documentation
+  videos/                 # Current final videos
+  audio/                  # Narration and other audio
+public/                   # Generated web-ready copies; not canonical
+tools/                    # Development and validation utilities
 ```
 
-El PDF público mantiene un nombre estable para permitir futuras sustituciones sin cambiar los enlaces:
+Canonical assets belong in `resources/`. Run `pnpm sync-assets` after changing them. Do not edit generated copies under `public/` directly.
+
+The public PDF keeps a stable name so future revisions can replace it without changing links:
 
 ```text
 public/El-metodo-cabello-saludable-de-yeny-demo.pdf
 ```
 
-## Publicación
+## Cloudflare Pages deployment
 
-La versión pública se aloja en el proyecto de Cloudflare Pages `belleza-con-yeney`. Antes de publicar, ejecuta `pnpm build` y confirma que las doce rutas en español e inglés se generen correctamente.
-
-Para exportar las doce rutas como archivos estáticos y publicar en Pages desde PowerShell:
+The public site is hosted in the Cloudflare Pages project `belleza-con-yeney`. Build and verify all twelve Spanish and English routes before deployment.
 
 ```powershell
 $env:CLOUDFLARE_PAGES_EXPORT = '1'
@@ -105,8 +107,12 @@ node node_modules/vinext/dist/cli.js build
 node node_modules/wrangler/bin/wrangler.js pages deploy dist/client --project-name belleza-con-yeney --branch main
 ```
 
-Se requiere una sesión válida de Wrangler. Sin esa variable, la compilación conserva el comportamiento habitual del proyecto.
+This requires a valid Wrangler session. Without `CLOUDFLARE_PAGES_EXPORT`, the build retains the project's normal behavior.
 
-## Derechos
+## Development language policy
 
-El contenido editorial, el libro y las fotografías pertenecen a sus respectivos titulares. Este repositorio no incluye una licencia de reutilización; su publicación pública no concede derechos sobre esos materiales.
+Source-code comments, scripts, commit messages, and repository documentation must be written in English. Spanish is retained only where it is part of the Spanish public experience or the Spanish-language book and promotional-video content. Do not translate the book title, author name, established public routes, or stable asset filenames.
+
+## Rights
+
+The editorial content, book, and photographs belong to their respective rights holders. This repository does not include a reuse license, and public deployment does not grant reuse rights for those materials.

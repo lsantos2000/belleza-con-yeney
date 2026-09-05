@@ -1,8 +1,8 @@
-# Generador del video promocional vigente
+# Current promotional-video generator
 
-Todo lo necesario vive en este repositorio; no utiliza Downloads ni otras carpetas externas.
+Everything required to reproduce the video lives in this repository. The generator does not depend on Downloads or other external directories.
 
-Desde la raíz del repositorio, con Python 3.12:
+From the repository root, using Python 3.12:
 
 ```powershell
 python -m venv books/ElMetodoCabelloSaludable/video-generator/.venv
@@ -10,17 +10,17 @@ books/ElMetodoCabelloSaludable/video-generator/.venv/Scripts/python -m pip insta
 books/ElMetodoCabelloSaludable/video-generator/.venv/Scripts/python books/ElMetodoCabelloSaludable/video-generator/generate.py
 ```
 
-Añadir `--preview` para comprobar duplicados y generar la vista general sin renderizar. En Linux/macOS usar `.venv/bin/python`. FFmpeg viene incluido en imageio-ffmpeg. Windows usa Arial; Linux usa DejaVu Sans. Se pueden definir PROMO_FONT y PROMO_FONT_BOLD con rutas a fuentes TTF.
+Add `--preview` to validate duplicates and create the storyboard overview without rendering the final video. On Linux or macOS, use `.venv/bin/python`. FFmpeg is provided by `imageio-ffmpeg`. Windows uses Arial; Linux uses DejaVu Sans. `PROMO_FONT` and `PROMO_FONT_BOLD` may point to custom TTF files.
 
-## Edición y recursos
+## Source files
 
-- `storyboard.json`: títulos, guion de referencia, orden de fotos y páginas.
-- `resources/images/author/video-source/`: selección fuente de fotografías.
-- `resources/images/books/ElMetodoCabelloSaludable/es/video-pages/`: páginas españolas.
-- `resources/audio/ElMetodoCabelloSaludable/narracion.m4a`: narración aprobada.
+- `storyboard.json`: Spanish on-screen titles, reference narration, and the photo/page sequence.
+- `resources/images/author/video-source/`: canonical source photographs.
+- `resources/images/books/ElMetodoCabelloSaludable/es/video-pages/`: Spanish book pages.
+- `resources/audio/ElMetodoCabelloSaludable/narracion.m4a`: approved Spanish narration.
 
-El validador comprueba rutas, SHA-256, similitud visual dHash, alternancia izquierda/derecha y presencia del libro. Las fotos individuales que aparecen en los tres collages nuevos se retiran del montaje individual. Las ilustraciones y retratos impresos dentro de otras páginas forman parte del libro original. No se duplica el retrato como fondo desenfocado. Todas las escenas incluyen una página, salvo el cierre aprobado donde Yeney sostiene el libro físico. Los fundidos de medio segundo se aplican entre escenas y bloques, sin pantallas negras.
+The validator checks paths, SHA-256 hashes, dHash visual similarity, left/right alternation, and book presence. Individual portraits embedded in the three supplied collage pages are excluded from standalone use. Illustrations and portraits printed inside other pages remain part of the original book. The generator does not duplicate portraits as blurred backgrounds. Every scene includes a book page except the approved closing scene, where Yeney holds the physical book. Half-second fades connect scenes and chapters without black frames.
 
-## Salidas
+## Outputs
 
-El video dura 180 segundos, con seis bloques de 30 segundos. Los artefactos vigentes se escriben en `resources/videos/`, `resources/images/books/` y `resources/docs/`. Los temporales de este generador están excluidos de Git.
+The video is 180 seconds long and contains six 30-second chapters. Current artifacts are written to `resources/videos/`, `resources/images/books/`, and `resources/docs/`. Temporary generator output is excluded from Git.

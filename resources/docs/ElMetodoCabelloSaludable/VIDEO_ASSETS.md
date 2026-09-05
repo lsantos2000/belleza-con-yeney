@@ -1,16 +1,15 @@
-# Video promocional de El Método Cabello Saludable
+# El Método Cabello Saludable promotional-video assets
 
-Archivos utilizados en la versión promocional final de tres minutos.
+This document records the assets and validation rules for the current three-minute promotional video.
 
-- `video/`: video final en MP4, 1280 × 720.
-- `fotos-unicas/`: archivo fuente de fotografías; el montaje vigente utiliza 23 fotos individuales, auditadas por SHA-256 y similitud visual, sin repeticiones. No se utiliza la foto del vestido rojo en la cocina ni el selfie del espejo. Los paneles de frases repetidas se sustituyeron por seis composiciones de páginas. Los tres retratos de la página 15 no se usan como fotos independientes.
-- `audio/narracion.m4a`: narración aprobada, reutilizable sin conexión.
-- `photo-audit.json`: procedencia de cada fotografía seleccionada.
-- `storyboard.jpg` y `verification.json`: vista general y comprobaciones del último render.
-- `paginas-libro/`: 41 páginas distintas, utilizadas una sola vez y en orden numérico, incluidos los collages 17, 19 y 21.
+- `resources/videos/ElMetodoCabelloSaludable/`: final 1280 × 720 MP4 video.
+- `resources/images/author/video-source/`: canonical author-photo archive. The current edit uses 23 standalone photographs, audited by SHA-256 and visual similarity, with no repeated files.
+- `resources/audio/ElMetodoCabelloSaludable/narracion.m4a`: approved Spanish narration.
+- `photo-audit.json`: provenance for selected photographs.
+- `verification.json`: automated checks for the latest render.
+- `resources/images/books/ElMetodoCabelloSaludable/es/storyboard.jpg`: latest storyboard overview.
+- `resources/images/books/ElMetodoCabelloSaludable/es/video-pages/`: 41 distinct Spanish book pages used once in numeric order, including collage pages 17, 19, and 21.
 
-La fotografía floral y el selfie del espejo con corsé blanco y jeans quedan excluidos del montaje. Los retratos individuales incluidos en los tres collages nuevos no vuelven a aparecer por separado. Los encabezados superiores usan estilo oración y la última pantalla conserva el diseño aprobado. Yeney alterna entre izquierda y derecha; todas las escenas contienen páginas o el libro físico del cierre. Hay fundidos de medio segundo entre escenas y bloques.
+The edit excludes the red-dress kitchen photograph, the white-corset mirror selfie, and the rejected floral portrait. Portraits embedded in supplied collage pages are not repeated as standalone images. Top headings use sentence case, and the final screen preserves the approved design. Yeney alternates between the left and right sides. Every scene contains a book page or, in the closing scene, the physical book. Half-second fades connect scenes and chapters.
 
-La lógica reproducible está en `tools/video-promo/generate.py`, con instrucciones y dependencias en ese directorio. No depende de rutas externas al repositorio. Las ilustraciones ya impresas dentro de las páginas del libro permanecen intactas; la unicidad auditada corresponde a las fotografías individuales del montaje.
-
-Pendiente de limpieza por bloqueo del entorno: `fotos-autora/` y `fotos-autora-final/` son carpetas antiguas que no se utilizan. Pueden eliminarse; el generador solo utiliza `fotos-unicas/`.
+The reproducible generator is in `books/ElMetodoCabelloSaludable/video-generator/`. It resolves all assets from this repository. Artwork and portraits printed within book pages remain unchanged; automated uniqueness checks apply to standalone montage photographs and selected page files.
