@@ -1,0 +1,4 @@
+# Shell scripts must keep LF endings so the shebang works on Unix shells.
+*.sh text eol=lf
+# PowerShell scripts use native Windows endings.
+*.ps1 text eol=crlf
