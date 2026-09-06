@@ -2,7 +2,8 @@
 
 Official bilingual website for **Yeney López-Pérez**, author of the Spanish-language book *El Método Cabello Saludable*. The site presents the book, its method, the author gallery, frequently asked questions, and a downloadable PDF preview.
 
-**Production:** [belleza-con-yeney.pages.dev](https://belleza-con-yeney.pages.dev/)
+GitHub link: https://github.com/lsantos2000/belleza-con-yeney
+Cloudflare deployment (dev) link: https://belleza-con-yeney.pages.dev/
 
 ## Features
 
