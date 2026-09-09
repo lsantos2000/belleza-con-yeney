@@ -34,7 +34,7 @@ Production URL: `https://belleza-con-yeney.pages.dev/`
 - When changing visible copy or navigation, update both language versions in the same change.
 - `app/language-switcher.tsx` stores the choice in the `yeney_language` cookie for one year.
 - The language selector must keep visitors on the equivalent route when switching languages.
-- Do not translate the book title, author name, PDF contents, or filenames unless explicitly requested.
+- Do not translate the book title, author name, PDF contents, or filenames unless explicitly requested. The book title is the one exception already requested: English pages under `/en` refer to the book as "The Healthy Hair Method" (translated from the Spanish original, "El Método Cabello Saludable"). The author name stays "Yeney López-Pérez" in both languages; Spanish pages and the Spanish PDF keep the Spanish title.
 
 ## Canonical routes
 

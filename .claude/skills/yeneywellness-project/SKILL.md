@@ -35,7 +35,7 @@ Run `pnpm sync-assets` after changing canonical resources. `predev` and `prebuil
 
 Spanish routes are `/`, `/el-metodo`, `/el-libro`, `/demo-libro`, `/la-autora`, and `/preguntas`. English mirrors live under `/en`.
 
-Update both language variants when changing shared public copy or navigation unless a request explicitly targets one language. Do not translate the book title, author name, established public route names, or stable asset filenames.
+Update both language variants when changing shared public copy or navigation unless a request explicitly targets one language. Do not translate the book title, author name, established public route names, or stable asset filenames — except the book title on English routes, which is now explicitly translated: English pages under `/en` call the book "The Healthy Hair Method" (the Spanish original, "El Método Cabello Saludable," stays untranslated on Spanish routes and in the Spanish PDF/artwork). Author photographs and the physical book cover art still show the Spanish title since that artwork is not to be modified; alt text and copy referring to the book by name use the English title on English pages regardless.
 
 ## Purchase information
 
@@ -55,6 +55,11 @@ The purchase component intentionally has two store buttons. YouTube is a separat
 - English routes (`/en/demo-libro`, `/en/el-libro`): `/The-Healthy-Hair-Method-demo-en.pdf`, an intentionally translated English sample distinct from the Spanish demo.
 - Canonical sources live in `resources/demo/`: `El_Metodo_Cabello_Saludable-demo.pdf` (Spanish) and `The_Healthy_Hair_Method_v48_demo_en_20260909.pdf` (English). `tools/sync-public-assets.mjs` copies both to their public paths; run `pnpm sync-assets` after replacing either.
 - `app/en/demo-libro/page.tsx` holds the English `pdf`/`downloadName` constants; update there if the file changes.
+
+## Book cover art
+
+- `/libro.jpg` and `/libro-portada.png` are the Spanish cover artwork, shown on both Spanish and English pages by default (the book itself isn't reprinted with a translated cover).
+- `/libro-portada-en.png` is a distinct, intentionally translated English wraparound cover ("The Healthy Hair Method"), used only on `app/en/page.tsx` and `app/en/preguntas/page.tsx`. Canonical source: `resources/images/books/ElMetodoCabelloSaludable/en/libro-portada-en.png`, copied by `tools/sync-public-assets.mjs`. Spanish routes keep `/libro-portada.png` untouched.
 
 ## Author photographs
 

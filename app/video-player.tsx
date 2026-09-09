@@ -17,8 +17,8 @@ const copy = {
   en: {
     eyebrow: 'Introduction video',
     heading: 'Meet the method in three minutes.',
-    lead: 'A short walkthrough of El Método Cabello Saludable: what you will find inside the book and how it can support your daily routine.',
-    title: 'Introduction video for El Método Cabello Saludable',
+    lead: 'A short walkthrough of The Healthy Hair Method: what you will find inside the book and how it can support your daily routine.',
+    title: 'Introduction video for The Healthy Hair Method',
     note: 'Prefer to watch it on YouTube?',
     link: 'Open the video',
   },
