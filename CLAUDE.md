@@ -84,13 +84,14 @@ The site should show two purchase buttons only:
 - Amazon — Kindle/printed book
 - Google Play Books — Ebook
 
-The demo PDF public path is stable:
+The demo PDF public paths are stable:
 
 ```text
-/El-metodo-cabello-saludable-de-yeny-demo.pdf
+/El-metodo-cabello-saludable-de-yeny-demo.pdf   (Spanish routes)
+/The-Healthy-Hair-Method-demo-en.pdf            (English routes under /en)
 ```
 
-If the demo changes, replace the file at that path and update the displayed page count in both languages. Do not rename the public path.
+The English demo is a distinct, intentionally translated sample used only on `/en/demo-libro` and `/en/el-libro`; the Spanish demo stays canonical for Spanish routes and is not translated. Canonical sources live in `resources/demo/`; `pnpm sync-assets` copies them to these public paths via `tools/sync-public-assets.mjs`. If a demo changes, replace the canonical file in `resources/demo/`, update the mapping in `tools/sync-public-assets.mjs` if the filename changes, re-run `pnpm sync-assets`, and update the displayed page count if one is shown. Do not rename the public paths.
 
 ## Content and safety
 

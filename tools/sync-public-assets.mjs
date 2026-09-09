@@ -10,6 +10,8 @@ const copies = [
   ['resources/images/books/ElMetodoCabelloSaludable/es/video-pages', 'public/media/video-promocional/paginas-libro'],
   ['resources/audio/ElMetodoCabelloSaludable/narracion.m4a', 'public/media/video-promocional/audio/narracion.m4a'],
   ['resources/videos/ElMetodoCabelloSaludable/el-metodo-cabello-saludable-promo-3-minutos.mp4', 'public/media/video-promocional/video/el-metodo-cabello-saludable-promo-3-minutos.mp4'],
+  ['resources/demo/El_Metodo_Cabello_Saludable-demo.pdf', 'public/El-metodo-cabello-saludable-de-yeny-demo.pdf'],
+  ['resources/demo/The_Healthy_Hair_Method_v48_demo_en_20260909.pdf', 'public/The-Healthy-Hair-Method-demo-en.pdf'],
 ];
 
 for (const [source, destination] of copies) {

@@ -5,7 +5,7 @@ description: Project context, architecture, media rules, deployment workflow, an
 
 # YeneyWellness project context
 
-Updated: 2026-09-08
+Updated: 2026-09-09
 
 ## Product
 
@@ -48,6 +48,13 @@ Update both language variants when changing shared public copy or navigation unl
 Each language links to its own Amazon and Google Play listing. The split is intentional; do not collapse either pair into one link. `app/site-chrome.tsx` selects the listings through `amazon(lang)` and `googlePlay(lang)` helpers, and `app/book-links.tsx` keeps `amazonEs`/`amazonEn` and `googlePlayEs`/`googlePlayEn`, so shared components stay the single place to change them. `app/page.tsx` is the Spanish-only home page and correctly hard-codes the Spanish listings.
 
 The purchase component intentionally has two store buttons. YouTube is a separate demo link, not a third store button. Avoid repeated purchase information within the same block.
+
+## PDF demo sample
+
+- Spanish routes (`/demo-libro`, `/el-libro`): `/El-metodo-cabello-saludable-de-yeny-demo.pdf`, not translated.
+- English routes (`/en/demo-libro`, `/en/el-libro`): `/The-Healthy-Hair-Method-demo-en.pdf`, an intentionally translated English sample distinct from the Spanish demo.
+- Canonical sources live in `resources/demo/`: `El_Metodo_Cabello_Saludable-demo.pdf` (Spanish) and `The_Healthy_Hair_Method_v48_demo_en_20260909.pdf` (English). `tools/sync-public-assets.mjs` copies both to their public paths; run `pnpm sync-assets` after replacing either.
+- `app/en/demo-libro/page.tsx` holds the English `pdf`/`downloadName` constants; update there if the file changes.
 
 ## Author photographs
 
