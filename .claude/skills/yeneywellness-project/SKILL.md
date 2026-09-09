@@ -5,7 +5,7 @@ description: Project context, architecture, media rules, deployment workflow, an
 
 # YeneyWellness project context
 
-Updated: 2026-09-05
+Updated: 2026-09-08
 
 ## Product
 
@@ -39,9 +39,13 @@ Update both language variants when changing shared public copy or navigation unl
 
 ## Purchase information
 
-- Amazon, printed and digital: https://www.amazon.com/dp/B0HFHC2QL7
-- Google Play Books, digital: https://play.google.com/store/books/details?id=8VgDEgAAQBAJ
-- YouTube demo: https://www.youtube.com/watch?v=xUI1K6fISGw
+- Amazon, printed and digital, Spanish routes: https://www.amazon.com/dp/B0HFHC2QL7
+- Amazon, printed and digital, English routes under `/en`: https://www.amazon.com/dp/B0HJ55BM9L
+- Google Play Books, digital, Spanish routes: https://play.google.com/store/books/details?id=8VgDEgAAQBAJ
+- Google Play Books, digital, English routes under `/en`: https://play.google.com/store/books/details?id=Gm8KEgAAQBAJ
+- YouTube demo, both languages: https://www.youtube.com/watch?v=xUI1K6fISGw
+
+Each language links to its own Amazon and Google Play listing. The split is intentional; do not collapse either pair into one link. `app/site-chrome.tsx` selects the listings through `amazon(lang)` and `googlePlay(lang)` helpers, and `app/book-links.tsx` keeps `amazonEs`/`amazonEn` and `googlePlayEs`/`googlePlayEn`, so shared components stay the single place to change them. `app/page.tsx` is the Spanish-only home page and correctly hard-codes the Spanish listings.
 
 The purchase component intentionally has two store buttons. YouTube is a separate demo link, not a third store button. Avoid repeated purchase information within the same block.
 

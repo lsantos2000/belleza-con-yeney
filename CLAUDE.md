@@ -69,8 +69,15 @@ English routes mirror these under `/en`.
 
 Use these canonical purchase links:
 
-- Amazon: `https://www.amazon.com/dp/B0HFHC2QL7`
-- Google Play Books: `https://play.google.com/store/books/details?id=8VgDEgAAQBAJ`
+- Amazon, Spanish routes: `https://www.amazon.com/dp/B0HFHC2QL7`
+- Amazon, English routes under `/en`: `https://www.amazon.com/dp/B0HJ55BM9L`
+- Google Play Books, Spanish routes: `https://play.google.com/store/books/details?id=8VgDEgAAQBAJ`
+- Google Play Books, English routes under `/en`: `https://play.google.com/store/books/details?id=Gm8KEgAAQBAJ`
+
+The Amazon and Google Play listings are separate per language and the split is
+intentional. Do not collapse them to a single link. Shared components select the
+listing from their `lang` prop, so change the link in `app/site-chrome.tsx` and
+`app/book-links.tsx` rather than in individual pages.
 
 The site should show two purchase buttons only:
 

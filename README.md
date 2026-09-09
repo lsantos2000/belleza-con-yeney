@@ -28,8 +28,10 @@ Cloudflare deployment (dev) link: https://belleza-con-yeney.pages.dev/
 
 ## Official book links
 
-- [Amazon — Kindle and printed book](https://www.amazon.com/dp/B0HFHC2QL7)
-- [Google Play Books — Ebook](https://play.google.com/store/books/details?id=8VgDEgAAQBAJ)
+- [Amazon — Kindle and printed book, Spanish edition](https://www.amazon.com/dp/B0HFHC2QL7)
+- [Amazon — Kindle and printed book, English edition](https://www.amazon.com/dp/B0HJ55BM9L)
+- [Google Play Books — Ebook, Spanish edition](https://play.google.com/store/books/details?id=8VgDEgAAQBAJ)
+- [Google Play Books — Ebook, English edition](https://play.google.com/store/books/details?id=Gm8KEgAAQBAJ)
 - [YouTube demo](https://www.youtube.com/watch?v=xUI1K6fISGw)
 
 ## Technology

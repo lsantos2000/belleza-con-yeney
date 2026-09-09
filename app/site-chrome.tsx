@@ -3,16 +3,18 @@ import { LanguageSwitcher, type SiteLanguage } from './language-switcher';
 const amazon = (lang: SiteLanguage) => lang === 'en'
   ? 'https://www.amazon.com/dp/B0HJ55BM9L'
   : 'https://www.amazon.com/dp/B0HFHC2QL7';
-const googlePlay = 'https://play.google.com/store/books/details?id=8VgDEgAAQBAJ';
+const googlePlay = (lang: SiteLanguage) => lang === 'en'
+  ? 'https://play.google.com/store/books/details?id=Gm8KEgAAQBAJ'
+  : 'https://play.google.com/store/books/details?id=8VgDEgAAQBAJ';
 const prefix = (lang: SiteLanguage) => lang === 'en' ? '/en' : '';
 
 export function MobileMenu({ lang = 'es' }: { lang?: SiteLanguage }) {
   const p = prefix(lang);
-  return <details className="mobileMenu"><summary aria-label={lang === 'es' ? 'Abrir menú' : 'Open menu'}><span></span><span></span><span></span></summary><div><a href={`${p}/`}>{lang === 'es' ? 'Inicio' : 'Home'}</a><a href={`${p}/el-metodo`}>{lang === 'es' ? 'El método' : 'The method'}</a><a href={`${p}/el-libro`}>{lang === 'es' ? 'El libro' : 'The book'}</a><a href={`${p}/demo-libro`}>PDF demo</a><a href={`${p}/la-autora`}>{lang === 'es' ? 'La autora' : 'The author'}</a><a href={`${p}/preguntas`}>{lang === 'es' ? 'Preguntas' : 'Questions'}</a><strong className="mobileBuyLabel">{lang === 'es' ? 'Comprar' : 'Buy'}</strong><a href={amazon(lang)} target="_blank" rel="noreferrer">{lang === 'es' ? 'Amazon Kindle/Libro Impreso' : 'Amazon Kindle/Printed Book'}</a><a href={googlePlay} target="_blank" rel="noreferrer">{lang === 'es' ? 'Google Play Libros PDF/ePub' : 'Google Play Books PDF/ePub'}</a></div></details>;
+  return <details className="mobileMenu"><summary aria-label={lang === 'es' ? 'Abrir menú' : 'Open menu'}><span></span><span></span><span></span></summary><div><a href={`${p}/`}>{lang === 'es' ? 'Inicio' : 'Home'}</a><a href={`${p}/el-metodo`}>{lang === 'es' ? 'El método' : 'The method'}</a><a href={`${p}/el-libro`}>{lang === 'es' ? 'El libro' : 'The book'}</a><a href={`${p}/demo-libro`}>PDF demo</a><a href={`${p}/la-autora`}>{lang === 'es' ? 'La autora' : 'The author'}</a><a href={`${p}/preguntas`}>{lang === 'es' ? 'Preguntas' : 'Questions'}</a><strong className="mobileBuyLabel">{lang === 'es' ? 'Comprar' : 'Buy'}</strong><a href={amazon(lang)} target="_blank" rel="noreferrer">{lang === 'es' ? 'Amazon Kindle/Libro Impreso' : 'Amazon Kindle/Printed Book'}</a><a href={googlePlay(lang)} target="_blank" rel="noreferrer">{lang === 'es' ? 'Google Play Libros PDF/ePub' : 'Google Play Books PDF/ePub'}</a></div></details>;
 }
 
 function PurchaseMenu({ lang = 'es' }: { lang?: SiteLanguage }) {
-  return <details className="purchaseMenu"><summary>{lang === 'es' ? 'Comprar' : 'Buy'} <span aria-hidden="true">⌄</span></summary><div><a href={amazon(lang)} target="_blank" rel="noreferrer"><strong>Amazon</strong><small>{lang === 'es' ? 'Kindle/Libro Impreso' : 'Kindle/Printed Book'}</small></a><a href={googlePlay} target="_blank" rel="noreferrer"><strong>{lang === 'es' ? 'Google Play Libros' : 'Google Play Books'}</strong><small>PDF/ePub</small></a></div></details>;
+  return <details className="purchaseMenu"><summary>{lang === 'es' ? 'Comprar' : 'Buy'} <span aria-hidden="true">⌄</span></summary><div><a href={amazon(lang)} target="_blank" rel="noreferrer"><strong>Amazon</strong><small>{lang === 'es' ? 'Kindle/Libro Impreso' : 'Kindle/Printed Book'}</small></a><a href={googlePlay(lang)} target="_blank" rel="noreferrer"><strong>{lang === 'es' ? 'Google Play Libros' : 'Google Play Books'}</strong><small>PDF/ePub</small></a></div></details>;
 }
 
 export function Header({ lang = 'es', path = '/' }: { lang?: SiteLanguage; path?: string }) {
@@ -21,7 +23,7 @@ export function Header({ lang = 'es', path = '/' }: { lang?: SiteLanguage; path?
 }
 
 export function PurchaseButtons({ lang = 'es' }: { lang?: SiteLanguage }) {
-  return <div className="purchaseInfo"><h3>{lang === 'es' ? 'Información de compra' : 'Purchase info'}</h3><div className="actions purchaseActions"><a className="button amazonButton" href={amazon(lang)} target="_blank" rel="noreferrer">{lang === 'es' ? 'Amazon Books · Libro impreso y digital' : 'Amazon Books · Printed and digital book'} <span>↗</span></a><a className="button googlePlay" href={googlePlay} target="_blank" rel="noreferrer">{lang === 'es' ? 'Google Play Books · Edición digital' : 'Google Play Books · Digital edition'} <span>↗</span></a></div><p><a href="https://www.youtube.com/watch?v=xUI1K6fISGw" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '0.2em' }}>{lang === 'es' ? 'YouTube Demo' : 'YouTube Demo'} <span aria-hidden="true">↗</span></a></p><p><strong>{lang === 'es' ? 'Reserva tu copia HOY MISMO.' : 'Reserve your copy TODAY.'}</strong></p></div>;
+  return <div className="purchaseInfo"><h3>{lang === 'es' ? 'Información de compra' : 'Purchase info'}</h3><div className="actions purchaseActions"><a className="button amazonButton" href={amazon(lang)} target="_blank" rel="noreferrer">{lang === 'es' ? 'Amazon Books · Libro impreso y digital' : 'Amazon Books · Printed and digital book'} <span>↗</span></a><a className="button googlePlay" href={googlePlay(lang)} target="_blank" rel="noreferrer">{lang === 'es' ? 'Google Play Books · Edición digital' : 'Google Play Books · Digital edition'} <span>↗</span></a></div><p><a href="https://www.youtube.com/watch?v=xUI1K6fISGw" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '0.2em' }}>{lang === 'es' ? 'YouTube Demo' : 'YouTube Demo'} <span aria-hidden="true">↗</span></a></p><p><strong>{lang === 'es' ? 'Reserva tu copia HOY MISMO.' : 'Reserve your copy TODAY.'}</strong></p></div>;
 }
 
 export function Footer({ lang = 'es' }: { lang?: SiteLanguage }) {
