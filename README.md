@@ -94,10 +94,11 @@ tools/                    # Development and validation utilities
 
 Canonical assets belong in `resources/`. Run `pnpm sync-assets` after changing them. Do not edit generated copies under `public/` directly.
 
-The public PDF keeps a stable name so future revisions can replace it without changing links:
+The public demo PDFs keep stable names so future revisions can replace them without changing links:
 
 ```text
 public/El-metodo-cabello-saludable-de-yeny-demo.pdf
+public/The-Healthy-Hair-Method-demo.pdf
 ```
 
 ## Cloudflare Pages deployment

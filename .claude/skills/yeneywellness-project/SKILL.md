@@ -77,6 +77,13 @@ The approved video is 180 seconds, 1280 × 720, and 24 fps, with six 30-second c
 - Storyboard: `books/ElMetodoCabelloSaludable/video-generator/storyboard.json`
 - Current output: `resources/videos/ElMetodoCabelloSaludable/el-metodo-cabello-saludable-promo-3-minutos.mp4`
 
+The English edition has its own reproducible Full HD generator and storyboard:
+
+- Generator: `books/ElMetodoCabelloSaludable/video-generator/generate_en.py`
+- Storyboard: `books/ElMetodoCabelloSaludable/video-generator/storyboard-en.json`
+- Current output: `resources/videos/ElMetodoCabelloSaludable/the-healthy-hair-method-promo-3-minutes.mp4`
+- Narration: `resources/audio/ElMetodoCabelloSaludable/narration-en.m4a`
+
 Spanish storyboard titles and narration are product content and must remain Spanish. Excluded photographs include `yeney-08.jpeg` and `yeney-16.jpeg`. Standalone portraits embedded in collage pages are also excluded from individual scenes. See `resources/docs/ElMetodoCabelloSaludable/VIDEO_ASSETS.md`.
 
 ## Development and validation

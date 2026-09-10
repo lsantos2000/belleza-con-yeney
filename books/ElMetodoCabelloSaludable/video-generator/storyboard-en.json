@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Before you buy another product",
+    "text": "Tired of trying product after product without understanding what your hair really needs? Before buying another mask or serum, you may need something more valuable: a method. The Healthy Hair Method turns confusion into a clear, practical, and conscious routine. It helps you understand your hair, care for your scalp, and make better choices from the very first wash.",
+    "scenes": [
+      {"kind":"pair","page":3,"photo":"yeney-01.jpeg","side":"left"},
+      {"kind":"pair","page":5,"photo":"yeney-02.jpeg","side":"right"},
+      {"kind":"pair","page":7,"photo":"yeney-03.jpeg","side":"left"},
+      {"kind":"book","page":9}
+    ]
+  },
+  {
+    "title": "Understand what your hair is asking for",
+    "text": "This is not a miracle promise or a one size fits all routine. You will learn to observe your scalp, recognize porosity, and understand the difference between shedding and breakage. Once you recognize those signals, you can stop buying on impulse and start choosing with intention. Important concepts are explained in simple language so you can apply them without feeling overwhelmed.",
+    "scenes": [
+      {"kind":"pair","page":11,"photo":"yeney-04.jpeg","side":"right"},
+      {"kind":"pair","page":13,"photo":"yeney-06.jpeg","side":"left"},
+      {"kind":"pair","page":15,"photo":"yeney-10.jpeg","side":"right"},
+      {"kind":"book","page":17}
+    ]
+  },
+  {
+    "title": "Build a routine that makes sense",
+    "text": "From washing and hydration to conditioning, brushing, heat protection, and nighttime care, every step has a purpose. The Healthy Hair Method helps you organize those steps and adapt them to your real life. Use fewer unnecessary products, spend less time guessing, and build more consistency. A good routine does not have to be complicated. It needs to be right for you.",
+    "scenes": [
+      {"kind":"pair","page":19,"photo":"yeney-12.jpeg","side":"left"},
+      {"kind":"pair","page":21,"photo":"yeney-13.jpeg","side":"right"},
+      {"kind":"pair","page":23,"photo":"yeney-15.jpeg","side":"left"},
+      {"kind":"book","page":24}
+    ]
+  },
+  {
+    "title": "Recipes and ingredients within reach",
+    "text": "Discover homemade recipes explained step by step, using familiar ingredients such as aloe, rosemary, rice water, honey, ginger, and batana oil. The goal is not to use everything at once. It is to know what to choose, how to introduce it, and when to stop. These practical ideas help you complement your hair care with patience and attention to your own results.",
+    "scenes": [
+      {"kind":"pair","page":31,"photo":"yeney-17.jpeg","side":"right"},
+      {"kind":"pair","page":36,"photo":"yeney-18.jpeg","side":"left"},
+      {"kind":"pair","page":51,"photo":"yeney-19.jpeg","side":"right"},
+      {"kind":"book","page":52}
+    ]
+  },
+  {
+    "title": "Turn what you learn into action",
+    "text": "Knowledge becomes more useful when you can put it into practice. The book includes tracking tools for wash days, products, goals, and a thirty day plan. Record changes, identify patterns, and adjust your routine calmly. Real progress is usually gradual, so observing and documenting your results is more valuable than chasing instant transformations.",
+    "scenes": [
+      {"kind":"pair","page":69,"photo":"yeney-20.jpeg","side":"left"},
+      {"kind":"pair","page":70,"photo":"yeney-21.jpeg","side":"right"},
+      {"kind":"pair","page":77,"photo":"yeney-28.jpeg","side":"left"},
+      {"kind":"book","page":78}
+    ]
+  },
+  {
+    "title": "Your hair is alive. Care for it from the root.",
+    "text": "This guide grew from Yeney López Pérez's personal experience and years of learning about healthy hair care. If you are ready to leave guesswork behind and begin a routine with purpose, this can be your first step. Get The Healthy Hair Method on Amazon in print or Kindle, or on Google Play Books in digital format. Visit Yeney Wellness and begin understanding your hair from the root today.",
+    "scenes": [
+      {"kind":"pair","page":83,"photo":"yeney-34.jpeg","side":"right"},
+      {"kind":"pair","page":85,"photo":"yeney-36.jpeg","side":"left"},
+      {"kind":"pair","page":87,"photo":"yeney-37.jpeg","side":"right"},
+      {"kind":"cta","page":1,"photo":"yeney-42.jpeg"}
+    ]
+  }
+]

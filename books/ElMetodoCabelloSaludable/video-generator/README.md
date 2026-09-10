@@ -12,6 +12,14 @@ books/ElMetodoCabelloSaludable/video-generator/.venv/Scripts/python books/ElMeto
 
 Add `--preview` to validate duplicates and create the storyboard overview without rendering the final video. On Linux or macOS, use `.venv/bin/python`. FFmpeg is provided by `imageio-ffmpeg`. Windows uses Arial; Linux uses DejaVu Sans. `PROMO_FONT` and `PROMO_FONT_BOLD` may point to custom TTF files.
 
+Generate the English promotional video on Windows with:
+
+```powershell
+books/ElMetodoCabelloSaludable/video-generator/.venv/Scripts/python books/ElMetodoCabelloSaludable/video-generator/generate_en.py
+```
+
+The English generator uses the original high-resolution English book pages, renders directly at 1920 × 1080, and creates an English neural narration with Edge TTS. Its storyboard is `storyboard-en.json` and its output is `resources/videos/ElMetodoCabelloSaludable/the-healthy-hair-method-promo-3-minutes.mp4`.
+
 ## Source files
 
 - `storyboard.json`: Spanish on-screen titles, reference narration, and the photo/page sequence.
